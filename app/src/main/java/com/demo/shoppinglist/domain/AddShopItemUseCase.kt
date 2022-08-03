@@ -1,9 +1,9 @@
 package com.demo.shoppinglist.domain
 
-class AddShopItemUseCase {
+class AddShopItemUseCase(private  val shopListRepository: ShopListRepository) {
 
-    fun addShopItemUseCase(shopItem: ShopItem) {
-
+    fun addShopItem(shopItem: ShopItem) {
+        shopListRepository.addShopItem(shopItem)
     }
 
 }
